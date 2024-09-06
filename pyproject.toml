@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "word-search-program"
+version = "0.1.0"
+description = "Searches a pdf file for the largest number in it."
+authors = ["Bayard Carlson <c.bayardcarlson@gmail.com>"]
+readme = "README.md"
+packages = [{include = "word_search_program"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pdfplumber = "^0.11.4"
+jupyter = "^1.1.1"
+pytest = "^8.3.2"
+black = "^24.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

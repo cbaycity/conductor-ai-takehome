@@ -7,4 +7,4 @@ The Jupyter Notebook `program_investigation.ipynb` shows that the program was ru
 
 Known Breaking Edge Cases:
 1. The PDF has no numbers.
-2. The PDF has a unit not accounted for.
+2. The PDF has a unit type that is not accounted for in `word_search_program.page_reader.py, UNITS_MAP`.

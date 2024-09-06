@@ -33,7 +33,7 @@ class _mock_pdfplumber:
     def extract_text(self):
         """Returns the page in order to mock the PDF plumber functionality."""
         return self.page
-            
+
     def extract_tables(self):
         """Does not accurately mock table extraction."""
         return []

@@ -75,6 +75,7 @@ def process_page(page: pdfplumber.PDF):
             largest_number = largest_in_table
     return largest_number
 
+
 def process_table(table) -> float:
     """Processes a table, assumes that any units listed in the table will be the same."""
     largest_number = 0
@@ -87,7 +88,7 @@ def process_table(table) -> float:
         for string in cell:
             if string is None:
                 continue
-            words = re.sub(r'[^\w\s]', '', string).split(" ")
+            words = re.sub(r"[^\w\s]", "", string).split(" ")
             for word in words:
                 if units:
                     break
@@ -95,7 +96,7 @@ def process_table(table) -> float:
                     units = word.lower()
 
     for cell in table:
-        if isinstance(cell,str):
+        if isinstance(cell, str):
             number = _is_number(cell)
             if number and units:
                 if largest_number < _adjust_units(number, units):
@@ -114,5 +115,3 @@ def process_table(table) -> float:
                         if largest_number < number:
                             largest_number = number
     return largest_number
-
-        
